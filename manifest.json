@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Split Screen",
+  "version": "1.0",
+  "description": "同一タブ内で画面を2分割して表示するChrome拡張機能",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
